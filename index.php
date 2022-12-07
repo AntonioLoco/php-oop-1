@@ -1,30 +1,10 @@
 <?php
-
-class Movie
-{
-    public $title;
-    public $duration;
-    public $genre;
-    public $description;
-
-    function __construct(String $title, int $durationMinute, String $genre, String $description)
-    {
-        $this->title = $title;
-        $this->duration = $durationMinute;
-        $this->genre = $genre;
-        $this->description = $description;
-    }
-
-    public function __toString()
-    {
-        return "Titolo: $this->title; Durata: $this->duration min; Genere: $this->genre; Descrizione: $this->description;";
-    }
-}
+require_once __DIR__ . "/Models/Movie.php";
 
 $movies =
     [
-        new Movie("Io sono Leggenda", 69, "Avventura", "Lorem ipsum"),
-        new Movie("Francesco e i suoi push su git", 104, "Horror", "Test Debug In Test debug")
+        new Movie("Io sono Leggenda", 69, ["Avventura", "Horror"], "Lorem ipsum"),
+        new Movie("Francesco e i suoi push su git", 104, ["Horror", "Fantasy", "Commedy"], "Test Debug In Test debug")
     ];
 
 
